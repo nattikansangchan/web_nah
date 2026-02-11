@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เกี่ยวกับตัวเรา</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<!-- Floating Rainbows -->
+<div id="rainbow-container"></div>
+
+<body>
+
+<div class="about-section">
+
+    
+
+    <div class="content">
+        <!-- รูปคน -->
+        <div class="profile-card">
+            <img src="profile.jpg" alt="profile">
+            <span class="hello">สวัสดี!</span>
+        </div>
+
+        <!-- กล่องข้อความ -->
+        <div class="text-box">
+            <p>
+                นางสาวนัฐติการณ์ แสงจันทร์ ชื่อเล่น “นะห์” อายุ 18 ปี เกิดวันที่ 20 สิงหาคม 2550 “ เป็นคนธรรมดาที่มีความสุขกับเรื่องเล็กๆ รอบตัว รักการกินกระเพราเหมือนเป็นชีวิตจิตใจ ตกหลุมรักมัจฉะลาเต้ทุกแก้วแบบไม่ต้องคิด ชอบถ่ายรูป และหลงใหลกับการถ่ายอะไรเล็กๆ น้อยๆ ที่คนอื่นอาจมองข้าม ใจอ่อนให้แมวจรทุกตัวที่เดินผ่าน ชอบฟังเพลงรัก เพลงคลั่งรักวนซ้ำไม่รู้เบื่อ และเป็นคนดูซีรีส์แล้วอินเก่ง อินจนเหมือนเข้าไปอยู่ในเรื่องจริงๆ 🐱☕📸🎶”
+            </p>
+        </div>
+    </div>
+
+    <!-- ปุ่มหน้าถัดไป -->
+    <a href="contact.html" class="next-btn">Next →</a>
+
+</div>
+<!-- ลูกเล่นลอย -->
+<div class="float-deco pink" style="width:80px;height:80px;top:10%;left:5%;"></div>
+<div class="float-deco blue" style="width:60px;height:60px;top:30%;left:90%;"></div>
+<div class="float-deco pink" style="width:50px;height:50px;top:70%;left:10%;"></div>
+<div class="float-deco blue" style="width:90px;height:90px;top:75%;left:80%;"></div>
+<div class="float-icon" style="top:20%;left:20%;">💗</div>
+<div class="float-icon" style="top:60%;left:5%;">⭐</div>
+<div class="float-icon" style="top:40%;left:85%;">🩵</div>
+<script>
+const rainbowContainer = document.getElementById("rainbow-container");
+
+function createRainbow() {
+    const rainbow = document.createElement("div");
+    rainbow.classList.add("rainbow");
+
+    rainbow.innerHTML = "🌈";
+
+    // ตำแหน่งสุ่ม
+    rainbow.style.left = Math.random() * 100 + "vw";
+    rainbow.style.bottom = "-40px";
+
+    // ความเร็วสุ่ม
+    const duration = Math.random() * 6 + 8;
+    rainbow.style.animationDuration = duration + "s";
+
+    rainbowContainer.appendChild(rainbow);
+
+    // ลบเมื่อจบ animation
+    setTimeout(() => {
+        rainbow.remove();
+    }, duration * 1000);
+}
+
+// สร้างสายรุ้งเรื่อย ๆ
+setInterval(createRainbow, 1200);
+</script>
+
+
+</body>
+</html>
+

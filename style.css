@@ -1,0 +1,144 @@
+** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+.hero {
+    height: 100vh;
+    background: url("bg main.jpg") no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* กล่องชื่อ */
+.name-box {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.35);
+    padding: 30px 60px;
+}
+
+.name-box h1 {
+    color: #6b4a3a;
+    font-size: 48px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+}
+
+/* เส้นบนล่าง */
+.line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #c97b7b;
+    margin: 12px 0;
+}
+
+/* ปุ่มหน้าถัดไป */
+.next-btn {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 12px 24px;
+    background-color: #6b4a3a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.next-btn:hover {
+    background-color: #8a5d49;
+
+}
+.candy {
+    position: fixed;
+    top: -50px;
+    font-size: 32px;
+    pointer-events: none;
+    animation: fall 3s linear forwards;
+    z-index: 9999;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+    
+}
+/* หัวใจลอย */
+.heart {
+    position: fixed;
+    font-size: 20px;
+    color: #7a4a2e; /* น้ำตาล */
+    animation: floatUp 6s linear forwards;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.9;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* พื้นหลังละมุน */
+body {
+    background: linear-gradient(135deg, #fde2e4, #f8edeb);
+    overflow-x: hidden;
+}
+
+/* หัวใจ / ดอกไม้ ลอย */
+.float-item {
+    position: fixed;
+    bottom: -30px;
+    font-size: 22px;
+    animation: floatSoft 8s ease-in forwards;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.85;
+}
+
+/* อนิเมชันลอยแบบนุ่ม */
+@keyframes floatSoft {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-160px) translateX(30px) scale(1.4);
+        opacity: 0;
+    }
+}
+
+/* ปุ่ม Next ให้หวานขึ้น */
+.next-btn {
+    background: #c89b7b;
+    box-shadow: 0 8px 20px rgba(200,155,123,0.4);
+}
+
+.next-btn:hover {
+    background: #b07d5a;
+}

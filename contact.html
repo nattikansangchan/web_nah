@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<!-- Pink floating decoration -->
+<div id="pink-effect"></div>
+
+<body>
+
+<div class="contact-container">
+    <h1 class="title">CONTACT</h1>
+
+    <div class="contact-item">
+        <img src="ig.jpg" alt="instagram">
+        <span>nxttixan_.07</span>
+    </div>
+
+    <div class="contact-item">
+        <img src="Fac.jpg" alt="facebook">
+        <span>Nattikan Nah</span>
+    </div>
+
+    <div class="contact-item">
+        <img src="m.png" alt="email">
+        <span>nattikiansangchan@gmail.com</span>
+    </div>
+</div>
+<!-- ลูกโป่งตกแต่ง -->
+<div class="balloon pink" style="top:15%; left:8%;"></div>
+<div class="balloon blue" style="top:35%; left:85%;"></div>
+<div class="balloon pink" style="top:70%; left:15%;"></div>
+<div class="balloon blue" style="top:75%; left:75%;"></div>
+<script>
+const container = document.getElementById("pink-effect");
+const icons = ["💗","💖","🌸","🌺","💕"];
+
+function createPinkItem() {
+    const item = document.createElement("div");
+    item.className = "floating-item";
+
+    item.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.fontSize = (Math.random() * 16 + 18) + "px";
+    item.style.animationDuration = (Math.random() * 6 + 8) + "s";
+    item.classList.add(Math.random() > 0.5 ? "pink" : "dark-pink");
+
+    container.appendChild(item);
+
+    setTimeout(() => {
+        item.remove();
+    }, 15000);
+}
+
+/* สร้างเรื่อย ๆ */
+setInterval(createPinkItem, 500);
+</script>
+
+</body>
+</html>
