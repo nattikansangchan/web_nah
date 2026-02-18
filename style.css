@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    font-family: 'Mali', cursive;
+    background: linear-gradient(to bottom, #ffd6e7, #fff5e4);
+    color: #8b5e57;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-bottom: 5px dotted #ffb6c1;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    color: #ff69b4;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+}
+
+.profile img {
+    width: 260px;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border: 6px solid white;
+}
+
+.about {
+    background: white;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    max-width: 400px;
+}
+
+.about h2 {
+    color: #ff69b4;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #fff;
+    margin-top: 30px;
+}
+.welcome {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#ffd6e7,#fff5e4);
+    text-align: center;
+}
+
+.welcome-box {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.enter-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 35px;
+    background: #ff69b4;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.enter-btn:hover {
+    background: #ff1493;
+    transform: scale(1.05);
+}
+.next-btn{
+  text-align:center;
+  margin-top:30px;
+}
+
+.next-btn a{
+  background:#ff8fb1;
+  color:white;
+  padding:12px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+  transition:.3s;
+}
+
+.next-btn a:hover{
+  background:#ff6f9f;
+  transform:scale(1.05);
+}
+.next-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;   /* ชิดขวา */
+    padding: 12px 24px;
+    background-color: #5a3e36;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    animation: bounce 2s infinite;
+}
+
+/* เอฟเฟกต์กระเด้งเบาๆ */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* ตอนเอาเมาส์ไปชี้ */
+.next-btn:hover {
+    background-color: #7a5448;
+    transform: scale(1.05);
+}
+/* พื้นหลังหวานละมุน */
+.contact-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f8e8e8, #f4d6d6);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* กล่องข้อมูล */
+.contact-box {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    width: 320px;
+}
+
+/* หัวข้อ */
+.contact-box h1 {
+    color: #7a5448;
+    margin-bottom: 10px;
+}
+
+/* ข้อความรอง */
+.subtitle {
+    color: #b07b7b;
+    margin-bottom: 25px;
+}
+
+/* รายการติดต่อ */
+.contact-item {
+    background: #f8f1f1;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+/* ปุ่มกลับ */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #7a5448;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #5a3e36;
+    transform: scale(1.05);
+}
+/* ของตกแต่งลอย */
+.floating-decor span {
+    position: fixed;
+    bottom: -50px;
+    font-size: 24px;
+    animation: floatUp 8s linear infinite;
+    opacity: 0.8;
+}
+
+/* กำหนดตำแหน่งแต่ละอัน */
+.floating-decor span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+.floating-decor span:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+.floating-decor span:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+}
+.floating-decor span:nth-child(4) {
+    left: 70%;
+    animation-delay: 1s;
+}
+.floating-decor span:nth-child(5) {
+    left: 85%;
+    animation-delay: 3s;
+}
+
+/* อนิเมชันลอยขึ้น */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* ลูกโป่งตกลงมา */
+.balloons span {
+    position: fixed;
+    top: -60px;
+    font-size: 26px;
+    animation: fallDown 6s linear infinite;
+    opacity: 0.9;
+}
+
+/* ตำแหน่งสุ่มแนวนอน */
+.balloons span:nth-child(1){ left: 10%; animation-delay: 0s;}
+.balloons span:nth-child(2){ left: 25%; animation-delay: 2s;}
+.balloons span:nth-child(3){ left: 45%; animation-delay: 1s;}
+.balloons span:nth-child(4){ left: 65%; animation-delay: 3s;}
+.balloons span:nth-child(5){ left: 80%; animation-delay: 4s;}
+.balloons span:nth-child(6){ left: 90%; animation-delay: 1.5s;}
+
+/* อนิเมชันตกลงมา */
+@keyframes fallDown {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(20deg);
+        opacity: 0;
+    }
+}
+/* ของหวานลอยลงมา */
+.sweets span {
+    position: fixed;
+    top: -50px;
+    font-size: 26px;
+    animation: sweetFall 7s linear infinite;
+    opacity: 0.9;
+}
+
+/* กระจายตำแหน่ง */
+.sweets span:nth-child(1){ left: 8%; animation-delay: 0s;}
+.sweets span:nth-child(2){ left: 22%; animation-delay: 2s;}
+.sweets span:nth-child(3){ left: 40%; animation-delay: 1s;}
+.sweets span:nth-child(4){ left: 58%; animation-delay: 3s;}
+.sweets span:nth-child(5){ left: 70%; animation-delay: 4s;}
+.sweets span:nth-child(6){ left: 85%; animation-delay: 2.5s;}
+.sweets span:nth-child(7){ left: 95%; animation-delay: 1.5s;}
+
+@keyframes sweetFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% { opacity: 1; }
+    100% {
+        transform: translateY(110vh) rotate(25deg);
+        opacity: 0;
+    }
+}
+.card {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
